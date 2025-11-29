@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8" />
+    <title>IndexTTS2 Studio - AI 授权码购买中心</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <style>
+        * { box-sizing: border-box; }
+        body {
+            margin: 0;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "微软雅黑", sans-serif;
+            background: #050816;
+            color: #f5f5f5;
+        }
+        a { color: #00d4ff; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+
+        .page {
+            max-width: 1080px;
+            margin: 0 auto;
+            padding: 24px 16px 40px;
+        }
+
+        .hero {
+            border-radius: 16px;
+            padding: 24px 24px 28px;
+            background: radial-gradient(circle at top left, #1f6feb 0, #0b1020 55%, #050816 100%);
+            box-shadow: 0 18px 45px rgba(0,0,0,0.55);
+        }
+        .hero-title {
+            font-size: 26px;
+            font-weight: 700;
+            margin-bottom: 8px;
+        }
+        .hero-sub {
+            font-size: 14px;
+            color: #d0d7de;
+            line-height: 1.6;
+        }
+        .hero-badge {
+            display: inline-flex;
+            align-items: center;
+            gap: 6px;
+            padding: 4px 10px;
+            border-radius: 999px;
+            background: rgba(0,0,0,0.35);
+            color: #9be9a8;
+            font-size: 11px;
+            margin-bottom: 8px;
+        }
+
+        .section-title {
+            margin: 28px 0 12px;
+            font-size: 18px;
+            font-weight: 600;
+        }
+        .section-sub {
+            font-size: 13px;
+            color: #9ca3af;
+            margin-bottom: 16px;
+        }
+
+        .plans {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+        }
+        .plan-card {
+            background: #0b1120;
+            border-radius: 14px;
+            padding: 16px 16px 18px;
+            border: 1px solid rgba(148,163,184,0.35);
+            box-shadow: 0 10px 30px rgba(15,23,42,0.6);
+            position: relative;
+        }
+        .plan-badge {
+            position: absolute;
+            top: 10px;
+            right: 12px;
+            font-size: 11px;
+            padding: 2px 8px;
+            border-radius: 999px;
+            background: rgba(56,189,248,0.1);
+            color: #38bdf8;
+        }
+        .plan-name {
+            font-size: 16px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .plan-price {
+            font-size: 22px;
+            font-weight: 700;
+            margin-bottom: 2px;
+        }
+        .plan-desc-main {
+            font-size: 13px;
+            color: #e5e7eb;
+            margin-bottom: 6px;
+        }
+        .plan-desc-sub {
+            font-size: 12px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .steps {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: 16px;
+            margin-top: 8px;
+        }
+        .step-card {
+            background: #020617;
+            border-radius: 12px;
+            padding: 12px 14px;
+            border: 1px solid rgba(31,41,55,0.9);
+        }
+        .step-title {
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 4px;
+        }
+        .step-body {
+            font-size: 12px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .qr-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 16px;
+            align-items: center;
+            margin-top: 8px;
+        }
+        .qr-box {
+            width: 160px;
+            height: 160px;
+            border-radius: 16px;
+            border: 1px dashed rgba(148,163,184,0.6);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 12px;
+            color: #6b7280;
+            background: radial-gradient(circle at top, rgba(15,118,110,0.25), transparent 55%);
+        }
+        .qr-text {
+            font-size: 12px;
+            color: #9ca3af;
+            line-height: 1.7;
+        }
+
+        .hint {
+            margin-top: 18px;
+            font-size: 12px;
+            color: #9ca3af;
+            line-height: 1.6;
+        }
+
+        .code-block {
+            font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;
+            font-size: 12px;
+            background: #020617;
+            border-radius: 8px;
+            padding: 8px 10px;
+            border: 1px solid #1e293b;
+            color: #e5e7eb;
+            margin-top: 6px;
+            overflow-x: auto;
+        }
+
+        @media (max-width: 640px) {
+            .hero { padding: 18px 14px 20px; }
+            .hero-title { font-size: 20px; }
+        }
+    </style>
+</head>
+<body>
+<div class="page">
+    <header class="hero">
+        <div class="hero-badge">
+            <span>IndexTTS2 Studio</span>
+            <span>AI 授权码中心</span>
+        </div>
+        <div class="hero-title">AI 授权码购买中心</div>
+        <div class="hero-sub">
+            用于 IndexTTS2 Studio 中的「AI 智能导入」「AI 识别角色」「AI 分配角色」等功能。<br />
+            使用 <strong>gemini-2.5-flash</strong> 大模型，按【总处理字数】计费，价格透明、可长期复购。
+        </div>
+    </header>
+
+    <section>
+        <h2 class="section-title">套餐选择</h2>
+        <p class="section-sub">
+            以下是推荐售价（示例），你可以根据自己的业务调整文案与字数。估算成本基于：1 万字 ≈ 0.05 元（按最贵情况预留了安全垫）。
+        </p>
+
+        <div class="plans">
+            <div class="plan-card">
+                <div class="plan-badge">入门推荐</div>
+                <div class="plan-name">个人创作者包</div>
+                <div class="plan-price">¥ 19</div>
+                <div class="plan-desc-main">可用 AI 字数约：<strong>50 万字</strong></div>
+                <div class="plan-desc-sub">
+                    适合个人作者 / 剧本号日常使用。<br />
+                    大约可支持 3–5 本中篇小说的文案导入、分镜和角色分配。
+                </div>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-badge">工作室常用</div>
+                <div class="plan-name">小型工作室包</div>
+                <div class="plan-price">¥ 49</div>
+                <div class="plan-desc-main">可用 AI 字数约：<strong>150 万字</strong></div>
+                <div class="plan-desc-sub">
+                    适合 2–5 人团队，长期维护连载项目。<br />
+                    可覆盖大量剧集的 AI 分镜 / 角色分析。
+                </div>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-badge">高频使用</div>
+                <div class="plan-name">专业工作室包</div>
+                <div class="plan-price">¥ 99</div>
+                <div class="plan-desc-main">可用 AI 字数约：<strong>400 万字</strong></div>
+                <div class="plan-desc-sub">
+                    适合批量生产账号、工作室日常大量上新。<br />
+                    支持密集的 AI 导入与角色识别需求。
+                </div>
+            </div>
+
+            <div class="plan-card">
+                <div class="plan-badge">MCN / 长期稳定</div>
+                <div class="plan-name">旗舰长期包</div>
+                <div class="plan-price">¥ 199</div>
+                <div class="plan-desc-main">可用 AI 字数约：<strong>1000 万字</strong></div>
+                <div class="plan-desc-sub">
+                    适合 MCN / 发行公司等高强度使用场景。<br />
+                    单位字成本最低，长期项目推荐选择。
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">购买流程</h2>
+        <p class="section-sub">
+            当前为简化版本，先采用「微信扫码 → 人工发码」模式，后续可无缝升级为自动发码系统。
+        </p>
+
+        <div class="steps">
+            <div class="step-card">
+                <div class="step-title">① 选择套餐并完成支付</div>
+                <div class="step-body">
+                    根据自己的使用量选择上方任意套餐。<br />
+                    使用微信扫右侧二维码完成转账，并在备注中写明：购买套餐名称 + 联系方式。
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-title">② 提交付款信息</div>
+                <div class="step-body">
+                    支付后，通过微信/QQ 联系客服，发送：<br />
+                    - 支付截图<br />
+                    - 准备绑定授权码的邮箱 / 微信号<br />
+                    客服核对后，将为你生成唯一的「AI 授权码」。
+                </div>
+            </div>
+
+            <div class="step-card">
+                <div class="step-title">③ 在软件中填入授权码</div>
+                <div class="step-body">
+                    打开 IndexTTS2 Studio：<br />
+                    - 进入「系统设置」页面<br />
+                    - 在「AI 授权码」输入框中粘贴收到的授权码<br />
+                    - 点击「保存设置」即可开始使用 AI 功能。
+                </div>
+            </div>
+        </div>
+
+        <div class="qr-wrapper">
+            <div class="qr-box">
+                在此放置<br />微信收款码图片<br />（示例：assets/pay_qr.png）
+            </div>
+            <div class="qr-text">
+                <strong>温馨提示：</strong><br />
+                - 请勿向陌生人转账，务必确认收款方为官方账号。<br />
+                - 每个授权码仅限一个工作环境使用，请勿外传或转售。<br />
+                - 如需企业定制版本或大批量字数，请单独联系客服沟通专属方案。
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <h2 class="section-title">在软件中如何使用授权码？</h2>
+        <p class="section-sub">
+            （以下为示例说明，你可以在软件中保持同样的文案风格，减少用户理解成本。）
+        </p>
+        <ol class="hint">
+            <li>打开 IndexTTS2 Studio，点击右上角「⚙ 系统设置」。</li>
+            <li>找到「AI 授权码」输入框，将从本页面购买到的授权码完整粘贴进去。</li>
+            <li>点击「💾 保存设置」，然后即可在「AI 智能导入」「AI 识别角色」「AI 分配角色」等功能中正常使用。</li>
+            <li>当授权字数即将用完时，软件会给出提示，你可以回到本页面继续购买新的授权码。</li>
+        </ol>
+
+        <div class="hint">
+            后端对接时，建议将授权码放在 HTTP 请求头中，例如：
+            <div class="code-block">
+                Authorization: Bearer &lt;用户的 AI 授权码&gt;
+            </div>
+        </div>
+    </section>
+
+    <footer class="hint">
+        © <span id="year"></span> IndexTTS2 Studio. 本页面仅为示例模板，你可以根据自己的品牌名称、LOGO、联系方式和支付渠道自由修改。
+    </footer>
+</div>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+</body>
+</html>
+
+
