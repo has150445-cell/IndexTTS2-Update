@@ -1,0 +1,9 @@
+{
+    "version": "1.0.0",
+    "version_code": 100,
+    "release_date": "2025-11-30",
+    "download_url": "",
+    "changelog": "首个正式版本发布",
+    "force_update": false,
+    "min_version": "1.0.0"
+}
